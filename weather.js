@@ -11,4 +11,7 @@ async function showWeather(){
     const data = await response.json();
     console.log("weatherdata :->"+data);
 
+    let newPara = document.createElement('p');
+    newPara.textContent = `${data?.main?.temp.toFixed(2)}°C`;
+  document.body.appendChild(newPara);
 }
